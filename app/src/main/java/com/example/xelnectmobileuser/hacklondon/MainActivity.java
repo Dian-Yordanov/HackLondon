@@ -1,9 +1,12 @@
 package com.example.xelnectmobileuser.hacklondon;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -11,7 +14,12 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_launch);
+
+        WebView webview = (WebView) findViewById(R.id.webView);
+        webview.loadUrl("http://www.just-eat.co.uk/");
+        //setContentView(webview);
+
         //committest
     }
 
@@ -32,6 +40,11 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Uri uri = Uri.parse("http://www.just-eat.co.uk/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+
             return true;
         }
 
