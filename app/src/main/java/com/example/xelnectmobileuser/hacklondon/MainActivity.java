@@ -1,5 +1,6 @@
 package com.example.xelnectmobileuser.hacklondon;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +12,12 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+/*<<<<<<< HEAD
+        setContentView(R.layout.activity_to_launch);
+=======
         setContentView(R.layout.activity_main);
+        //committest
+>>>>>>> origin/master*/
     }
 
 
@@ -31,9 +37,11 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage("com.justeat.app.es");
+            startActivity(LaunchIntent);
+
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
