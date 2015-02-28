@@ -1,6 +1,9 @@
 package com.example.xelnectmobileuser.hacklondon;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,6 +12,8 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,6 +22,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       /* final Button next = (Button) findViewById(R.id.image) ;
+       // Drawable d = Drawable.createFromPath("@drawable/upper_label");
+        next.setBackgroundResource(R.drawable.upper_label);
+*/
+        //imageView(R.drawable.upper_label);
 
        /* this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
