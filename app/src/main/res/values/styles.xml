@@ -1,9 +1,15 @@
 <resources>
 
-    <!-- Base application theme.
+ <!--    Base application theme.
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         &lt;!&ndash; Customize your theme here. &ndash;&gt;
 
     </style>-->
+
+    <color name="custom_theme_color">#FFFFFF</color>
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@color/custom_theme_color</item>
+        <item name="android:colorBackground">@color/custom_theme_color</item>
+    </style>
 
 </resources>

@@ -7,13 +7,10 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ibTest"
+            android:id="@+id/upperButton"
             android:src="@drawable/upper_label"
-            android:layout_centerHorizontal="true"
             android:adjustViewBounds="true"
             android:cropToPadding="false"
-            android:layout_below="@+id/hlTopBar"
-            android:background="#00000000"
             android:scaleType="fitXY" />
 
         <LinearLayout
@@ -34,11 +31,13 @@
                 android:text="your location or postcode"
                 android:textSize="20dp" />
 
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="location button"
-                android:id="@+id/button2" />
+                android:id="@+id/ibTestq112"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,7 +48,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="0dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="106dp">
+            android:layout_marginTop="0dp">
 
             <Button
                 android:layout_width="wrap_content"
@@ -74,46 +73,25 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="0dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="202dp">
+            android:layout_marginTop="0dp">
 
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="option 4"
-                android:id="@+id/button6"
-                android:layout_gravity="center_horizontal" />
+                android:id="@+id/yellowButton"
+                android:src="@drawable/yellow_button"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY" />
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
+        <ImageButton
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="0dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="298dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="option 5"
-                android:id="@+id/button7" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="option 6"
-                android:id="@+id/button8" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="option 7"
-                android:id="@+id/button9" />
-        </LinearLayout>
+            android:id="@+id/bottomButton"
+            android:src="@drawable/bottom_label"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="fitXY" />
 
     </LinearLayout>

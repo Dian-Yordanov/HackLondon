@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
@@ -22,6 +23,19 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton upperButton = (ImageButton) findViewById(R.id.upperButton);
+        upperButton.setClickable(false);
+        upperButton.setPressed(true);
+
+        ImageButton yellowButton = (ImageButton) findViewById(R.id.yellowButton);
+        yellowButton.setClickable(false);
+        yellowButton.setPressed(true);
+
+        ImageButton bottomButton = (ImageButton) findViewById(R.id.bottomButton);
+        bottomButton.setClickable(false);
+        bottomButton.setPressed(true);
+
        /* final Button next = (Button) findViewById(R.id.image) ;
        // Drawable d = Drawable.createFromPath("@drawable/upper_label");
         next.setBackgroundResource(R.drawable.upper_label);
