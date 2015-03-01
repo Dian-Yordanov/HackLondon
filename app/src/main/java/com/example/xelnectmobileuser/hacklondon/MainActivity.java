@@ -1,5 +1,6 @@
 package com.example.xelnectmobileuser.hacklondon;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +10,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
@@ -17,24 +19,52 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton upperButton = (ImageButton) findViewById(R.id.upperButton);
+      /*  ImageButton upperButton = (ImageButton) findViewById(R.id.upperButton);
         upperButton.setClickable(false);
         upperButton.setPressed(true);
+
+        ImageButton bottomButton = (ImageButton) findViewById(R.id.bottomButton);
+        bottomButton.setClickable(false);
+        bottomButton.setPressed(true);
 
         ImageButton yellowButton = (ImageButton) findViewById(R.id.yellowButton);
         yellowButton.setClickable(false);
         yellowButton.setPressed(true);
 
-        ImageButton bottomButton = (ImageButton) findViewById(R.id.bottomButton);
-        bottomButton.setClickable(false);
-        bottomButton.setPressed(true);
+        ImageButton gpsButton = (ImageButton) findViewById(R.id.gpsButton);
+        gpsButton.setClickable(false);
+        gpsButton.setPressed(true);
+
+        ImageButton allButton = (ImageButton) findViewById(R.id.allButton);
+        allButton.setClickable(false);
+        allButton.setPressed(true);
+
+        ImageButton deliveryButton = (ImageButton) findViewById(R.id.deliveryButton);
+        deliveryButton.setClickable(false);
+        deliveryButton.setPressed(true);
+
+        ImageButton collectionButton = (ImageButton) findViewById(R.id.collectionButton);
+        collectionButton.setClickable(false);
+        collectionButton.setPressed(true);*/
+
+        Button buttonForNewActivity = (Button) findViewById(R.id.buttonForNewActivity);
+        buttonForNewActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent myIntent = new Intent(MainActivity.this, MainActivity2.class);
+             //   myIntent.putExtra("key",); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+
 
        /* final Button next = (Button) findViewById(R.id.image) ;
        // Drawable d = Drawable.createFromPath("@drawable/upper_label");

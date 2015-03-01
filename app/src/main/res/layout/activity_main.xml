@@ -1,17 +1,29 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView" >
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/upperButton"
             android:src="@drawable/upper_label"
             android:adjustViewBounds="true"
             android:cropToPadding="false"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:clickable="false"
+            android:baselineAlignBottom="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:longClickable="false"
+            android:nestedScrollingEnabled="false"
+            android:theme="@style/Base.Theme.AppCompat.Light" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -20,7 +32,9 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="0dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp">
+            android:layout_marginTop="0dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
 
             <EditText
                 android:layout_width="wrap_content"
@@ -29,12 +43,15 @@
                 android:layout_below="@+id/button"
                 android:layout_centerHorizontal="true"
                 android:text="your location or postcode"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ibTestq112"
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:id="@+id/gpsButton"
+                android:src="@drawable/gps_button"
                 android:adjustViewBounds="true"
                 android:cropToPadding="false"
                 android:scaleType="fitXY" />
@@ -50,23 +67,37 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="option1 "
-                android:id="@+id/button3" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="option 2"
-                android:id="@+id/button4" />
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:id="@+id/allButton"
+                android:src="@drawable/all_button"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+               />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="option 3"
-                android:id="@+id/button5" />
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:id="@+id/deliveryButton"
+                android:src="@drawable/delivery"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:theme="@style/Base.Theme.AppCompat.Light"/>
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:id="@+id/collectionButton"
+                android:src="@drawable/collection"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:theme="@style/Base.Theme.AppCompat.Light"/>
         </LinearLayout>
 
         <LinearLayout
@@ -75,23 +106,32 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/yellowButton"
                 android:src="@drawable/yellow_button"
                 android:adjustViewBounds="true"
                 android:cropToPadding="false"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                android:theme="@style/Base.Theme.AppCompat.Light"/>
         </LinearLayout>
 
-        <ImageButton
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/bottomButton"
-            android:src="@drawable/bottom_label"
+            android:src="@drawable/upper_bottom_label"
             android:adjustViewBounds="true"
             android:cropToPadding="false"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:theme="@style/Base.Theme.AppCompat.Light"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonForNewActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light"/>
 
     </LinearLayout>
+</ScrollView>
