@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -42,7 +43,7 @@ public class MainActivity2 extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.layout_launch);
 
-            Gallery gallery = (Gallery) findViewById(R.id.gallery);
+            final GalleryExtended gallery = (GalleryExtended) findViewById(R.id.gallery);
 
             gallery.setAdapter(new ImageAdapter(this));
             gallery.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -50,11 +51,13 @@ public class MainActivity2 extends Activity {
                 public void onItemClick(AdapterView parent,
                                         View v, int position, long id)
                 {
+                    gallery.setSelection(position+1);
                     Toast.makeText(getBaseContext(),
                             "pic" + (position + 1) + " selected",
                             Toast.LENGTH_SHORT).show();
                 }
             });
+
         }
 
         public class ImageAdapter extends BaseAdapter
